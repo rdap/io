@@ -27,15 +27,15 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class             instance    title       tags mask     isfloating   monitor */
+	{ "FloatingApp",     NULL,       NULL,       0,            1,           -1 },
+	{ "AppOnSpecificWS", NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const float mfact     = 0.5;  /* factor of master area size [0.05..0.95] */
+static const int nmaster     = 2;    /* number of clients in master area */
+static const int resizehints = 0;    /* 0 will disrespect size hints in tiled resizals */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -58,7 +58,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray100, "-nf", col_gray10, "-sb", col_blue60, "-sf", col_gray10, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "xterm", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
