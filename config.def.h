@@ -28,13 +28,13 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class             instance    title       tags mask     isfloating   monitor */
-	{ "FloatingApp",     NULL,       NULL,       0,            1,           -1 },
+	{ "MPlayer",         NULL,       NULL,       0,            1,           -1 },
 	{ "AppOnSpecificWS", NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
 static const float mfact     = 0.5;  /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 2;    /* number of clients in master area */
+static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 0 will disrespect size hints in tiled resizals */
 
 static const Layout layouts[] = {
