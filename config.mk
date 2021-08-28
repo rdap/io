@@ -1,5 +1,5 @@
-# dwm version
-VERSION = 6.2
+# io version
+VERSION = 21H28-A
 
 # Customize below to fit your system
 
