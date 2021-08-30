@@ -28,15 +28,14 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class             instance    title       tags mask     isfloating   monitor */
-	{ "MPlayer",         NULL,       NULL,       0,            1,           -1 },
-	{ "AppOnSpecificWS", NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "MPlayer",         NULL,       NULL,       0,            0,           -1 },
+	{ "Firefox",         NULL,       NULL,       0,            0,           -1 },
 };
 
 /* layout(s) */
 static const float mfact     = 0.5;  /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 0 will disrespect size hints in tiled resizals */
-static const int lockfullscreen = 0; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -82,7 +81,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  cyclelayout,    {.i = +1 } },
-	{ MODKEY|ShiftMask              XK_space,  cyclelayout,    {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_space,  cyclelayout,    {.i = -1 } },
 	{ MODKEY,                       XK_t,      togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
